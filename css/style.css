@@ -8,26 +8,107 @@ font-family: 'PT Serif', serif;
 }
 html{
     box-sizing: border-box;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    font-size: 14px;
 }
 :root{
-    --font-primary: 'PT Serif', serif;
-    --font-secondary: 'Poppins', sans-serif;
+    --font-secondary: 'PT Serif', serif;
+    --font-primary: 'Poppins', sans-serif;
     --font-footer:  'Montserrat', sans-serif;
+    --color-primary: #000000;
     --color-footer: #BDBDBD;
-    --padding-mobile: 1.27rem;
-    --padding-destop: 4.27rem;
+    --padding-mobile: 12px;
+    --padding-destop: 240px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--padding-mobile);
+    padding-right: var(--padding-mobile);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 2.71rem;
+    margin-top: 8.74vh;
+    margin-bottom: 8.86vh;
+}
+.heading{
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.57rem;
+    line-height: 3.42rem;
+    letter-spacing: -0.045em;
+}
+.heading-sm{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.28rem;
+    line-height: 1.92rem;
+    text-transform: uppercase;
+    margin-bottom: 0.71rem;
+}
+.team-purpose{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 88.8vw;
+}
+main{
+    display: grid;
+    grid-template-columns: 41.6vw 41.6vw;
+    column-gap: 6.66vw;
+    margin-bottom: 16.50vh;
+}
+.member{
+    display: grid;
+    grid-template-columns: 36.1vw 1fr;
+    column-gap: 1.67vw;
+}
+.member:nth-child(even){
+    margin-top: 48px;
+}
+.member-infos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.member-name{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+.member-role{
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.72rem;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    width: 200px;
+    height: 1rem;
+    transform: rotate(90deg) translateY(98px) translateX(94px);
+}
+.member-picture{
+    height: auto;
+    width: 36.1vw;
 }
 footer{
     padding-right: var(--padding-mobile);
-    margin-bottom: 1.33rem;
+    margin-bottom: 1.71rem;
 }
 .author{
     color: var(--color-footer);
     font-family: var(--font-footer);
     font-style: normal;
     font-weight: 500;
-    font-size: 0.77rem;
-    line-height: 0.94rem;
+    font-size: 1rem;
+    line-height: 1.21rem;
     text-align: center;
 }
 .author a:hover{
