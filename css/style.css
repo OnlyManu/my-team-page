@@ -1,0 +1,41 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+:root{
+    --font-primary: 'PT Serif', serif;
+    --font-secondary: 'Poppins', sans-serif;
+    --font-footer:  'Montserrat', sans-serif;
+    --color-footer: #BDBDBD;
+    --padding-mobile: 1.27rem;
+    --padding-destop: 4.27rem;
+}
+footer{
+    padding-right: var(--padding-mobile);
+    margin-bottom: 1.33rem;
+}
+.author{
+    color: var(--color-footer);
+    font-family: var(--font-footer);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.77rem;
+    line-height: 0.94rem;
+    text-align: center;
+}
+.author a:hover{
+    text-decoration: underline;
+}
+.author a{
+    text-decoration: none;
+    color: var(--color-footer);
+    font-style: normal;
+    font-weight: 700;
+}
