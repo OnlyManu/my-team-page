@@ -18,8 +18,8 @@ html{
     --font-footer:  'Montserrat', sans-serif;
     --color-primary: #000000;
     --color-footer: #BDBDBD;
-    --padding-mobile: 12px;
-    --padding-destop: 240px;
+    --padding-mobile: 3.2vw;
+    --padding-destop: 16.66vw;
 }
 .container{
     display: flex;
@@ -59,7 +59,7 @@ header{
 }
 main{
     display: grid;
-    grid-template-columns: 41.6vw 41.6vw;
+    grid-template-columns: repeat(2, 41.6vw);
     column-gap: 6.66vw;
     margin-bottom: 16.50vh;
 }
@@ -67,9 +67,6 @@ main{
     display: grid;
     grid-template-columns: 36.1vw 1fr;
     column-gap: 1.67vw;
-}
-.member:nth-child(even){
-    margin-top: 48px;
 }
 .member-infos{
     display: flex;
@@ -79,7 +76,7 @@ main{
 .member-name{
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 21px;
 }
 .member-role{
@@ -96,7 +93,7 @@ main{
 }
 .member-picture{
     height: auto;
-    width: 36.1vw;
+    width: 100%;
 }
 footer{
     padding-right: var(--padding-mobile);
@@ -119,4 +116,45 @@ footer{
     color: var(--color-footer);
     font-style: normal;
     font-weight: 700;
+}
+@media screen and (max-width: 991px) {
+    .member:nth-child(even){
+        margin-top: 48px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container{
+        padding-right: var(--padding-destop);
+        padding-left: var(--padding-destop);
+    }
+    header{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto minmax(auto, 439px);
+        justify-content: space-between;
+        gap: none;
+    }
+    .team-purpose{
+        font-size: 1.28rem;
+        width: 100%;
+    }
+    main{
+        grid-template-columns: repeat(3, 18.33vw);
+        column-gap: 4.65vw;
+        margin-bottom: 12.77vh;
+    }
+    .member{
+        grid-template-columns: 16.53vw 16px;
+        column-gap: 0.69vw;
+    }
+    .member:nth-child(3n+2){
+        margin-top: 99px;
+    }
+    .member-name{
+        font-size: 1.28rem;
+    }
+    .member-role{
+        font-size: 0.85rem;
+        line-height: 1.14rem;
+    }
 }
