@@ -19,7 +19,7 @@ html{
     --color-primary: #000000;
     --color-footer: #BDBDBD;
     --padding-mobile: 3.2vw;
-    --padding-destop: 16.66vw;
+    --padding-desktop: 16.66vw;
 }
 .container{
     display: flex;
@@ -67,6 +67,9 @@ main{
     display: grid;
     grid-template-columns: 36.1vw 1fr;
     column-gap: 1.67vw;
+}
+.member:nth-child(even){
+    margin-top: 48px;
 }
 .member-infos{
     display: flex;
@@ -117,16 +120,7 @@ footer{
     font-style: normal;
     font-weight: 700;
 }
-@media screen and (max-width: 991px) {
-    .member:nth-child(even){
-        margin-top: 48px;
-    }
-}
-@media screen and (min-width: 992px) {
-    .container{
-        padding-right: var(--padding-destop);
-        padding-left: var(--padding-destop);
-    }
+@media screen and (min-width: 768px) {
     header{
         width: 100%;
         display: grid;
@@ -134,21 +128,12 @@ footer{
         justify-content: space-between;
         gap: none;
     }
+    main{
+        margin-bottom: 12.77vh;
+    }
     .team-purpose{
         font-size: 1.28rem;
         width: 100%;
-    }
-    main{
-        grid-template-columns: repeat(3, 18.33vw);
-        column-gap: 4.65vw;
-        margin-bottom: 12.77vh;
-    }
-    .member{
-        grid-template-columns: 16.53vw 16px;
-        column-gap: 0.69vw;
-    }
-    .member:nth-child(3n+2){
-        margin-top: 99px;
     }
     .member-name{
         font-size: 1.28rem;
@@ -156,5 +141,22 @@ footer{
     .member-role{
         font-size: 0.85rem;
         line-height: 1.14rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container{
+        padding-right: var(--padding-desktop);
+        padding-left: var(--padding-desktop);
+    }
+    main{
+        grid-template-columns: repeat(3, 18.33vw);
+        column-gap: 4.65vw;
+    }
+    .member{
+        grid-template-columns: 16.53vw 16px;
+        column-gap: 0.69vw;
+    }
+    .member:nth-child(3n+2){
+        margin-top: 99px;
     }
 }
